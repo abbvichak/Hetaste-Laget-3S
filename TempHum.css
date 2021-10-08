@@ -1,7 +1,7 @@
 .title {
     display: flex;
     justify-content: center;
-    background: rgb(34, 29, 82);
+    background: rgba(34, 29, 82, 0.5);
     padding: 8px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 50px;
@@ -9,30 +9,33 @@
 }
 
 body {
-    background-color: rgb(31, 22, 65);
+    background: rgb(28,54,145);
+    background: radial-gradient(circle, rgba(28,54,145,1) 0%, rgba(11,17,57,1) 100%);
 }
 
 .tempImg {
     display: flex;
     justify-content: center;
-    align-content: center;
-    background-color: rgb(31, 22, 65);
-    border:rgb(31, 22, 65);
-    padding: 128px;
-    border-radius: 256px;
-    font-size: xx-large;
+    background-color: rgba(34, 29, 82, 0.5);
+    border:rgb(76, 111, 226);
+    border-style: solid;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px;
+    font-size: x-large;
     color:sandybrown;
 }
 
 .humImg {
     display: flex;
     justify-content: center;
-    align-content: center;
-    background-color: rgb(31, 22, 65);
-    border:rgb(31, 22, 65);
-    padding: 128px;
-    border-radius: 256px;
-    font-size: xxxx-large;
+    background-color: rgba(34, 29, 82, 0.5);
+    border:rgb(76, 111, 226);
+    border-style: solid;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 16px;
+    font-size: x-large;
     color:sandybrown;
 }
 
@@ -43,5 +46,4 @@ body {
     left: 0px;
     top: 0px;
     z-index: -1;
-} */ 
-fuck off
+} */
