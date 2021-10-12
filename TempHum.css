@@ -1,46 +1,60 @@
 
-body {
-    background-color: rgb(230, 230, 240);  
+body , html{
+    /* background: rgb(255,180,90);
+    background: radial-gradient(circle, rgba(255,180,90,1) 0%, rgba(50,220,220,1) 100%); */
+    background: rgb(40,40,40);
+    margin: 0px;
+    padding: 0px;
 }
 .header {
-    color: white;
+    color: rgba(255,255,255 ,0.85);
     justify-content: center;
     align-items: center;
     display: flex;
     height: 400px;
-    font-size: 100px;
+    font-size: 80px;
     margin-top: auto;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-shadow: 0px 0px 16px 0px black;
-
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-shadow: 0px 0px 12px 0px black;
+    text-shadow: 8px 8px 8px rgba(0,0,0,0.5);
+    font-weight: bold;
 }
+
 #bild {
     width: 100%;
     height: 400px;
-    background-image: url('https://practiceacceleration.com/wp-content/uploads/2017/05/Authority-Web-Banner2-1349x400.jpg');
-    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
-    
+    background-image: url('https://wheelchairtravel.org/wp-content/uploads/2018/11/montreal-guide-header.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
+    background-size: cover;
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
 }
 #card {
-    background: rgba(75, 75, 75, 0.5);
-    width: 800px;
-    height: 400px;
+    background: rgba(0,0,0, 0.1);
+    width: 600px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 20px;
-    border-radius: 8px ;
-    color: rgba(230,230,230,0.9);
+    margin-top: 48px;
+    border: solid;
+    border-color: cyan;
+    border-radius: 8px;
+    color: rgba(210,255,150,1);
     padding: 24px;
     font-size: 24px;
-    box-shadow: 8px, 8px, 8px, 8px black;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.3);
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 }
 .navigering {
     width: 100%;
     background-color: rgba(34, 29, 82, 0.0);
 }
 
-#temperatur {
+#area {
     font-weight: bold;
     font-size: 36px;
     height: 0px;
@@ -50,15 +64,17 @@ body {
 #grader {
     font-size: 36px;
     margin-top: 10px;
-    margin.left: 5px;
+    margin-left: 5px;
     font-weight: bolder;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 #tid {
-margin-top: 64px;
-color: grey;
+    margin-top: 64px;
+    color: rgba(210,255,150,1);
 }
+
+/* BUTTONS */
 
 #menu-buttons {
     display: flex;
@@ -66,17 +82,33 @@ color: grey;
     margin-top: 16px;
 }
 
-
-
 .temp-button {
-    color: rgba(230,230,230,0.9);
-    background-color: transparent;
+    color: rgba(210,255,150,1);
+    background-color: rgba(255,0,100,0.2);
+    height: 24px;
+    width: 100px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    border-bottom: solid 3px;
+    border-right: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-color: rgb(255,0,100);
+    box-shadow: 0px 4px 4px -4px #ff2e5b;
 }
 
-
-
 .hum-button {
-    color: rgba(230,230,230,0.9);
-    background-color: transparent;
-    border
-    border:yellowgreen;
+    color: rgba(210,255,150,1);
+    background-color: rgba(255,0,100,0.2);
+    height: 24px;
+    width: 100px;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-left: 16px;
+    border-bottom: solid 3px;
+    border-right: transparent;
+    border-left: transparent;
+    border-top: transparent;
+    border-color: rgb(255,0,100);
+    box-shadow: 0px 4px 4px -4px #ff2e5b;
+}

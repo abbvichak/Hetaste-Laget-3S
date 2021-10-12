@@ -10,26 +10,51 @@
     <script src="TempHum.js"></script>
 </head>
 <body>
+    <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
 
     <div id='bild' > 
         <h1 class="header">Hetast i laget</h1>
     </div>
-    
-    <div id="card">
-        <div id="temperatur">Inomhus:<br></div>
-            <div id="tid">4:00</div>
 
-            <div id="menu-buttons">
-                <span><button class="temp-button">Temperatur</button></span>
-                <span><button class="hum-button">Luftfuktighet</button></span>
-            </div>
-            <div>
-                <div id="grader">16°C</div>
-            </div>
+    <div id="cards">
+        <div id="card">
+                <div id="area">Inomhus:<br></div>
+
+                    <div id="tid">4:00</div>
+
+                    <div id="menu-buttons">
+                        <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
+                        <span><button class="hum-button" type="submit" name="formbtn">Luftfuktighet</button></span>
+                    </div>
+
+                    <!-- <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;"></div> -->
+
+                    <div>
+                        <div id="grader">16°C</div>
+                    </div>
             
-            <span id="card-image">
-                <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
-            </span>
+                    <!-- <span id="card-image">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
+                    </span> -->
+        </div>
+        <div id="card">
+                <div id="area">Utomhus:<br></div>
+            
+                    <div id="tid">4:00</div>
+            
+                    <div id="menu-buttons">
+                        <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
+                        <span><button class="hum-button" type="submit" name="formbtn">Luftfuktighet</button></span>
+                    </div>
+            
+                    <div>
+                        <div id="grader">16°C</div>
+                    </div>
+                    <!-- <span id="card-image">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
+                    </span> -->
+            </div>
+        </div>
     </div>
     <!-- <div class="navigering">
             <nav class="navbar">
