@@ -10,33 +10,33 @@
 
 body {
     background: rgb(28,54,145);
-    background: radial-gradient(circle, rgba(28,54,145,1) 0%, rgba(11,17,57,1) 100%);
+    background: radial-gradient(circle, rgb(28, 46, 112) 0%, rgb(13, 17, 48) 100%);
 }
 
 .tempImg {
-    display: flex;
+    display:flex;
     justify-content: center;
     background-color: rgba(34, 29, 82, 0.5);
     border:rgb(76, 111, 226);
     border-style: solid;
-    padding: 16px;
+    padding: 8px;
     margin: 16px;
-    border-radius: 16px;
-    font-size: x-large;
-    color:sandybrown;
+    border-radius: 8px;
+    font-size: large;
+    color:skyblue;
 }
 
 .humImg {
-    display: flex;
+    display:flex;
     justify-content: center;
     background-color: rgba(34, 29, 82, 0.5);
     border:rgb(76, 111, 226);
     border-style: solid;
-    padding: 16px;
+    padding: 8px;
     margin: 16px;
-    border-radius: 16px;
-    font-size: x-large;
-    color:sandybrown;
+    border-radius: 8px;
+    font-size: large;
+    color: skyblue;
 }
 
 /* .aurora {
