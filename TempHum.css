@@ -1,26 +1,38 @@
+
 body {
-    background-color: rgb(45,45,55);  
+    background-color: rgb(230, 230, 240);  
 }
 .header {
     color: white;
     justify-content: center;
+    align-items: center;
     display: flex;
-    font-size: 48px;
-    background-color: rgb(65,65,78)
+    height: 400px;
+    font-size: 100px;
+    margin-top: auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-shadow: 0px 0px 16px 0px black;
 
 }
+#bild {
+    width: 100%;
+    height: 400px;
+    background-image: url('https://practiceacceleration.com/wp-content/uploads/2017/05/Authority-Web-Banner2-1349x400.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.5);
+    
+}
 #card {
-    background: rgb(28,54,145);background: linear-gradient(20deg, rgba(28,54,145,0.3) 0%, rgba(11,17,57,1) 100%);
+    background: rgba(75, 75, 75, 0.5);
     width: 800px;
     height: 400px;
     display: flex;
     flex-direction: column;
     margin: auto;
+    margin-top: 20px;
     border-radius: 8px ;
     color: rgba(230,230,230,0.9);
     padding: 24px;
     font-size: 24px;
-    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
     box-shadow: 8px, 8px, 8px, 8px black;
 }
 .navigering {
@@ -36,8 +48,35 @@ body {
 }
 
 #grader {
-    font-size: 64px;
-    margin-top: 128px;
+    font-size: 36px;
+    margin-top: 10px;
+    margin.left: 5px;
     font-weight: bolder;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+
+#tid {
+margin-top: 64px;
+color: grey;
+}
+
+#menu-buttons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 16px;
+}
+
+
+
+.temp-button {
+    color: rgba(230,230,230,0.9);
+    background-color: transparent;
+}
+
+
+
+.hum-button {
+    color: rgba(230,230,230,0.9);
+    background-color: transparent;
+    border
+    border:yellowgreen;
