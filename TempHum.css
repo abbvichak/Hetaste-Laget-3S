@@ -6,15 +6,32 @@ body {
     justify-content: center;
     display: flex;
     font-size: 48px;
+    background-color: rgb(65,65,78)
 
 }
 #card {
     background: rgb(28,54,145);background: linear-gradient(20deg, rgba(28,54,145,0.3) 0%, rgba(11,17,57,1) 100%);
-    width: 512px;
-    height: 256px;
-    display: flex;
+    width: 800px;
+    height: 400px;
+    display:grid;
     margin: auto;
     border-radius: 8px ;
-    color: white;
-    padding-left: 16px;
+    color: rgba(230,230,230,0.9);
+    padding: 24px;
+    font-size: 24px;
+}
+.navigering {
+    width: 100%;
+    background-color: rgba(34, 29, 82, 0.0);
+}
+
+#temperatur {
+    font-weight: bold;
+    font-size: 36px;
+    height: 0px;
+}
+
+#grader {
+    font-size: 48px;
+    margin-top: 20px;
 }
