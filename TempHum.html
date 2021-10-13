@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I hetaste laget</title>
     <link rel="stylesheet" href="TempHum.css">
-    <link rel="icon" href="https://staustelltorchlightcarnival.co.uk/wp-content/uploads/2019/06/cropped-StATC-icon-1-300x300.png"></link>
+    <link rel="icon" href="https://image.flaticon.com/icons/png/512/769/769346.png"></link>
     <script src="TempHum.js"></script>
 </head>
 <body>
-    <script src="https://code.jscharting.com/2.9.0/jscharting.js"></script>
 
     <div id='bild' > 
-        <h1 class="header">Hetast i laget</h1>
+        <h1 class="header">I hetaste laget</h1>
     </div>
+
+    <div id = "digital-clock"> </div>
 
     <div id="cards">
         <div id="card">
                 <div id="area">Inomhus:<br></div>
-
-                    <div id="tid">4:00</div>
 
                     <div id="menu-buttons">
                         <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
@@ -32,15 +31,15 @@
                     <div>
                         <div id="grader">16°C</div>
                     </div>
-            
                     <!-- <span id="card-image">
                         <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
                     </span> -->
+                    <span id="house-image">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/house-131994967908082856.png" width="156px">
+                    </span>
         </div>
         <div id="card">
                 <div id="area">Utomhus:<br></div>
-            
-                    <div id="tid">4:00</div>
             
                     <div id="menu-buttons">
                         <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
@@ -53,9 +52,16 @@
                     <!-- <span id="card-image">
                         <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
                     </span> -->
+                    <span id="house-image">
+                        <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="156px">
+                    </span>
             </div>
         </div>
     </div>
+
+    
+    <script src = "TempHum.js"> </script>
+
     <!-- <div class="navigering">
             <nav class="navbar">
                 <div class="menu-toggle" id="mobile-menu">
