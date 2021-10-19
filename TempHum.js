@@ -3,7 +3,7 @@ let database = firebase.database();
 function gettemp() {
   let temperature = document.getElementById('temperatur')
 
-
+  
 
 
 
