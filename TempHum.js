@@ -1,68 +1,3 @@
-// function currentTime() {
-//     let date = new Date(); 
-//     let hh = date.getHours();
-//     let mm = date.getMinutes();
-//     let ss = date.getSeconds();
-//     let session = "AM";
-  
-//     if(hh == 0){
-//         hh = 12;
-//     }
-//     if(hh > 12){
-//         hh = hh - 12;
-//         session = "PM";
-//      }
-  
-//      hh = (hh < 10) ? "0" + hh : hh;
-//      mm = (mm < 10) ? "0" + mm : mm;
-//      ss = (ss < 10) ? "0" + ss : ss;
-      
-//      let time = hh + ":" + mm + ":" + ss + " " + session;
-  
-//     document.getElementById("clock").innerText = time; 
-//     let t = setTimeout(function(){ currentTime() }, 1000);
-//   }
-//   currentTime();
-
-//BUTTON TEST?
-
-// let btn = document.createElement("button");
-// btn.innerHTML = "Save";
-// btn.onclick = function () {
-// alert("Button is clicked");
-// };
-// document.body.appendChild(btn);
-
-//-
-
-//   JSC.Chart('chartDiv', {
-//     type: 'horizontal column',
-//     series: [
-//        {
-//           name:'Andy',
-//           points: [
-//              {x: 'Apples', y: 50},
-//              {x: 'Oranges', y: 32}
-//           ]
-//        },{
-//           name:'Anna',
-//           points: [
-//              {x: 'Apples', y: 30},
-//              {x: 'Oranges', y: 22}
-//           ]
-//        }
-//     ]
-//  });
-
-
-//C TO F CONVERTER?
-
-// function convertToF(celsius) {
-//     return celsius * 9/5 + 32
-//   }
-  
-//   convertToF(30);
-
   function Time() {
     // Creating object of the Date class
     var date = new Date();
@@ -109,21 +44,5 @@
     }
    }
    Time();
-
-   
-  //  var admin = require("firebase-admin");
-
-  //  var serviceAccount = require("path/to/serviceAccountKey.json");
-   
-  //  admin.initializeApp({
-  //    credential: admin.credential.cert(serviceAccount),
-  //    databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app"
-  //  });  
-
-
-  //  import { initializeApp } from 'firebase/app';
-
-  //  const app = initializeApp(firebaseConfig);
-
 
 
