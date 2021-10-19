@@ -1,17 +1,30 @@
 let database = firebase.database();
 
-const app = initializeApp(firebaseConfig);
+var temp1 = database.ref('Victors Sensor/Temperature/Current_Temp');
+var hum1 = database.ref('Victors Sensor/Humidity/Current_Hum');
 
-const database = getDatabase();
+let indoor = [];
+let selectedType = 0;
 
-let dataBaseRef = ref(database, "Victors Sensor/Temperature/Current_Temp")
-
-onValue(dataBaseRef, (snapshot) => {
-
-    console.log(snapshot.val())
-
-    document.getElementById("grader").innerHTML = snapshot.val()
+temp1.on('value', data => {
+  console.log("temp");
+  indoor[0] = data.node_.value_;
+  update();
 });
+
+hum1.on('value', data => {
+  console.log("hum");
+  indoor[1] = data.node_.value_;
+  update();
+});
+
+function update(){
+  console.log(1); 
+  document.getElementById("grader").innerHTML = `${indoor[selectedType]}${selectedType == 0 ? "°C" : "%"}`
+}
+
+
+
 function Time() {
     // Creating object of the Date class
     var date = new Date();
