@@ -24,7 +24,6 @@ function update(){
 }
 
 
-
 function Time() {
     // Creating object of the Date class
     var date = new Date();

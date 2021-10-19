@@ -20,59 +20,117 @@
             appId: "1:1063955437225:web:b80891af14d7635aac7bb8",
         };
         firebase.initializeApp(firebaseConfig);
-      </script>      
+      </script>
+
+<!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Temperatur', 'Luftfuktighet'],
+      ['2004',  1000,      400],
+      ['2005',  1170,      460],
+      ['2006',  660,       1120],
+      ['2007',  1030,      540]
+    ]);
+
+    var options = {
+      title: 'Company Performance',
+      curveType: 'function',
+      legend: { position: 'bottom' }
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById('temp_chart'));
+
+    chart.draw(data, options);
+  }
+
+</script> -->
+
 </head>
 <body>
 
     <div id='bild' > 
         <h1 class="header">I hetaste laget</h1>
+        <div id = "digital-clock"> </div>
+        <div id="menu-buttons">
+            <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
+            <span><button class="hum-button" type="submit" name="formbtn">Luftfuktighet</button></span>
+        </div>
     </div>
-
-    <div id = "digital-clock"> </div>
 
     <div id="cards">
         <div id="card">
-                <div id="area">Inomhus:<br></div>
-
-                    <div id="menu-buttons">
-                        <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
-                        <span><button class="hum-button" type="submit" name="formbtn">Luftfuktighet</button></span>
-                    </div>
+                <div id="area">Klassrummet<br></div>
 
                     <!-- <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;"></div> -->
 
                     <div>
+                        <div id="grader">16°</div>
+                    </div>
+                    
+                    <div id="card-image">
+                        <img src="https://icons-for-free.com/iconfiles/png/512/house-131994967908082856.png" width="96px" height="96px">
+
                         <div id="grader"></div>
                     </div>
-                    <!-- <span id="card-image">
-                        <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
-                    </span> -->
-                    <span id="house-image">
-                        <img src="https://icons-for-free.com/iconfiles/png/512/house-131994967908082856.png" width="156px">
-                    </span>
         </div>
         <div id="card">
-                <div id="area">Utomhus:<br></div>
+            <div id="area">Terrariet<br></div>
             
-                    <div id="menu-buttons">
-                        <span><button class="temp-button" type="submit" name="formbtn">Temperatur</button></span>
-                        <span><button class="hum-button" type="submit" name="formbtn">Luftfuktighet</button></span>
-                    </div>
-            
-                    <div>
-                        <div id="grader">16°C</div>
-                    </div>
-                    <!-- <span id="card-image">
-                        <img src="https://icons-for-free.com/iconfiles/png/512/fire+orange+icon-1320166152922732900.png" width="256px">
-                    </span> -->
-                    <span id="house-image">
-                        <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="156px">
-                    </span>
+                <div>
+                    <div id="grader">16°</div>
+                </div>
+                
+                <div id="card-image">
+                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px" height="96px">
+                </div>
             </div>
-        </div>
+
+        <div id="card">
+            <div id="area">Vardagsrummet<br></div>
+
+                <div>
+                    <div id="grader">16°</div>
+                </div>
+                
+                <div id="card-image">
+                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px" height="96px">
+                </div>
+            </div>
+
+        <div id="card">
+            <div id="area">Entrén<br></div>
+                    
+                <div>
+                <div id="grader">16°</div>
+                </div>
+                
+                <div id="card-image">
+                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px" height="96px">
+                </div>
+            </div>
+
+            <div id="card">
+                <div id="area">Biblioteket<br></div>
+
+                    <div>
+                        <div id="grader">16°</div>
+                    </div>
+                    
+                    <div id="card-image">
+                        <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px" height="96px">
+                    </div>
+                </div>
+            </div>
+
+            
     </div>
 
-    
+    <!-- <div id="temp_chart" style="height: 200px; width: 400px; margin: auto; color: transparent;"></div> -->
+
     <script src = "TempHum.js"> </script>
 
     <!-- <div class="navigering">
