@@ -1,14 +1,17 @@
 let database = firebase.database();
 
-function gettemp() {
-  let temperature = document.getElementById('temperatur')
+const app = initializeApp(firebaseConfig);
 
-  
+const database = getDatabase();
 
+let dataBaseRef = ref(database, "Victors Sensor/Temperature/Current_Temp")
 
+onValue(dataBaseRef, (snapshot) => {
 
-}
+    console.log(snapshot.val())
 
+    document.getElementById("grader").innerHTML = snapshot.val()
+});
 function Time() {
     // Creating object of the Date class
     var date = new Date();
