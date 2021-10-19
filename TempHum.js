@@ -1,6 +1,13 @@
 let database = firebase.database();
 
+function gettemp() {
+  let temperature = document.getElementById('temperatur')
 
+
+
+
+
+}
 function Time() {
     // Creating object of the Date class
     var date = new Date();
