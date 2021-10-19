@@ -126,13 +126,13 @@
    const firebaseConfig = {
     apiKey: "AIzaSyAfxNn3StYr8XoMJnCsk_6TZPnCVe5gyig",
     authDomain: "hetaste-laget-s3.firebaseapp.com",
-    databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app/",
+    databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app",
     projectId: "hetaste-laget-s3",
     storageBucket: "hetaste-laget-s3.appspot.com",
-    messagingSenderId: "SENDER_ID",
-  
-
-   }
+    messagingSenderId: "1063955437225",
+    appId: "1:1063955437225:web:b80891af14d7635aac7bb8",
+    measurementId: "G-W5MRV5H1S3"
+  };
 
    const app = initializeApp(firebaseConfig);
 
