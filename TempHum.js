@@ -109,3 +109,32 @@
     }
    }
    Time();
+
+   
+   var admin = require("firebase-admin");
+
+   var serviceAccount = require("path/to/serviceAccountKey.json");
+   
+   admin.initializeApp({
+     credential: admin.credential.cert(serviceAccount),
+     databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app"
+   });  
+
+
+   import { initializeApp } from 'firebase/app';
+
+   const firebaseConfig = {
+    apiKey: "AIzaSyAfxNn3StYr8XoMJnCsk_6TZPnCVe5gyig",
+    authDomain: "hetaste-laget-s3.firebaseapp.com",
+    databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app",
+    projectId: "hetaste-laget-s3",
+    storageBucket: "hetaste-laget-s3.appspot.com",
+    messagingSenderId: "1063955437225",
+    appId: "1:1063955437225:web:b80891af14d7635aac7bb8",
+    measurementId: "G-W5MRV5H1S3"
+  };
+
+   const app = initializeApp(firebaseConfig);
+
+
+
