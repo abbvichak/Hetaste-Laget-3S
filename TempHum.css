@@ -1,7 +1,5 @@
 
 body , html{
-    /* background: rgb(255,180,90);
-    background: radial-gradient(circle, rgba(255,180,90,1) 0%, rgba(50,220,220,1) 100%); */
     background: rgb(40,40,40);
     margin: 0px;
     padding: 0px;
@@ -15,7 +13,6 @@ body , html{
     font-size: 70px;
     margin-top: auto;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    /* box-shadow: 0px 0px 12px 0px black; */
     text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
     font-weight: bold;
 }
@@ -61,10 +58,6 @@ body , html{
     box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
     text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 }
-/* .navigering {
-    width: 100%;
-    background-color: rgba(34, 29, 82, 0.0);
-} */
 
 #area {
     display: flex;
@@ -127,8 +120,6 @@ body , html{
     text-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4); 
 }
 
-/* BUTTONS */
-
 #menu-buttons {
   position: absolute; 
   display: flex;
@@ -155,10 +146,8 @@ body , html{
     border-left: transparent;
     border-top: transparent;
     border-radius: 4px 4px 0px 0px;
-    /* border-color: rgb(255,0,100); */
     cursor: pointer;
     transition-duration: 0.4;
-    /* box-shadow: 0px 4px 4px -4px #ff2e5b; */
 }
 
 .hum-button {
@@ -176,28 +165,21 @@ body , html{
     border-left: transparent;
     border-top: transparent;
     border-radius: 4px 4px 0px 0px;
-    /* border-color: rgb(255,0,100); */
     cursor:pointer;
-    transition-duration: 0.4;
-    /* box-shadow: 0px 4px 4px -4px #ff2e5b; */
-    
+    transition-duration: 0.4;    
 }
 .hum-button:hover {
-    background-color: rgb(0, 90, 68); /* Green */
+    background-color: rgb(0, 90, 68);
     color: white;
   }
 .temp-button:hover {
     background-color: rgb(0, 90, 68);
 }
 
-
-
-/* Importing Open Sans Condensed Google font */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 #digital-clock {
 
- /* background-color: rgba(0, 0, 0, 0.1); */
  color: #21db8e;
  width: 35%;
  margin:auto;
@@ -207,21 +189,5 @@ body , html{
  font-family: 'Open Sans Condensed', sans-serif;
  font-size: 36px;
  text-align: center;
- /* border: solid;
- border-color: grey;
- border-radius: 8px; */
  text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
- /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
-/* Button pressed effect */
-/* .temp-button:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px); */
-
-/* #temp_chart {
-    background: transparent;
-    margin-top: 64px;
-    width: 400px;
-    height: 200px;
-} */
