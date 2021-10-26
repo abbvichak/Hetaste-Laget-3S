@@ -8,18 +8,18 @@
     <title>I hetaste laget</title>
     <link rel="stylesheet" href="TempHum.css">
     <link rel="icon" href="https://image.flaticon.com/icons/png/512/769/769346.png">
-    </link>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
-        var firebaseConfig = {
+        let firebaseConfig = {
             apiKey: "AIzaSyAfxNn3StYr8XoMJnCsk_6TZPnCVe5gyig",
             authDomain: "hetaste-laget-s3.firebaseapp.com",
             databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app",
             projectId: "hetaste-laget-s3",
             storageBucket: "hetaste-laget-s3.appspot.com",
             messagingSenderId: "1063955437225",
-            appId: "1:1063955437225:web:b80891af14d7635aac7bb8",
+            appId: "1:1063955437225:web:b80891af14d7635aac7bb8"
         };
         firebase.initializeApp(firebaseConfig);
     </script>
@@ -88,7 +88,7 @@
                 </div>
 
                 <div id="card-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px"
+                    <img src="https://cdn3.iconfinder.com/data/icons/app-build-minimal/128/1-60-512.png" width="96px"
                         height="96px">
                 </div>
             </div>
@@ -110,7 +110,34 @@
     </div>
 
     <script src="TempHum.js"> </script>
+    <canvas id="chart" style="width:20%;max-width:1200px"></canvas>
+    <script> 
+ var xValues = [100,200,300,400,500,600,700,800,900,1100];-
+new Chart("chart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      borderColor: "red",
+      fill: false
+    },{
+      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      borderColor: "green",
+      fill: false
+    },{
+      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      borderColor: "blue",
+      fill: false
+    }]
+  },
+  options: {
+    legend: {display: false}
+  }
+});
 
+ 
+    </script>
 </body>
 
 </html>

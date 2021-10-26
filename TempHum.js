@@ -146,9 +146,13 @@ function update(t) {
 }
 Time();
 
-document.getElementById("menu-buttons").getElementsByClassName("")
-
-function click() {
-  selectedType = number(!selectedType);
-  console.log(`Selected Type: ${SelectedType}`)
+document.getElementsByClassName("temp-button")[0].onclick = () => {
+  selectedType = 0
+  
 }
+document.getElementsByClassName("hum-button")[0].onclick = () => {
+  selectedType = 1
+}
+
+
+
