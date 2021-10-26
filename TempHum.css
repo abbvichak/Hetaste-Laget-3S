@@ -192,7 +192,7 @@ body , html{
  text-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 }
 
-#chart{
+/* #chart{
     margin-bottom: 7%;
     margin-top: 105px; 
     margin-left: auto;
@@ -202,4 +202,167 @@ body , html{
     padding: 10 px;
     float: auto; 
 
+} */
+
+#credits {
+    width: 100%;
+    height:256px;
+    position: relative;
+    background-image: url("https://wallpaperaccess.com/full/1681981.jpg");
+    box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.4);
+    background-size: cover;
+    object-fit: cover;
+    object-position: 0% 10%;
+}
+
+#credits-header {
+    /* background-color: rgb(48,48,48); */
+    display: flex;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    padding-bottom:32px;
+    /* margin-right: 50%; */
+    z-index: 10;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+    box-shadow: 8px 0px 0px 0px rgba(0,0,0,1);
+}
+
+#credits-list {
+    /* background-color: rgb(48,48,48); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+    margin-top: -48px;
+    z-index: 15;
+}
+
+#victor {
+    margin: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-left: solid 2px rgb(116, 116, 116);
+    border-right: solid 2px rgb(116, 116, 116);
+    color: #21db8e;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+#gabriel {
+    margin:16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-left: solid 2px rgb(116, 116, 116);
+    border-right: solid 2px rgb(116, 116, 116);
+    color: #21db8e;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+#simon {
+    margin:16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-left: solid 2px rgb(116, 116, 116);
+    border-right: solid 2px rgb(116, 116, 116);
+    color: #21db8e;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+#lucas {
+    margin:16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-left: solid 2px rgb(116, 116, 116);
+    border-right: solid 2px rgb(116, 116, 116);
+    color: #21db8e;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+#noel {
+    margin:16px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 4px;
+    border-left: solid 2px rgb(116, 116, 116);
+    border-right: solid 2px rgb(116, 116, 116);
+    color: #21db8e;
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.7);
+}
+
+#statistics {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    height: 400px;
+    background-color: rgb(0,0,0,0.2);
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+    margin: auto;
+    margin-bottom: 64px;
+    justify-content: center;
+}
+
+/* #columner {
+    display: block;
+    flex-direction: row;
+    margin-bottom: 32px;
+    margin-top: 32px;
+    gap: 60px;
+    width: 15%;
+} */
+
+#klassrummet {
+    display: flex;
+    margin: 24px;
+    margin-top: auto;
+    background-color:rgba(0,0,0,0.2);
+    width: 160px;
+    height: 350px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+}
+
+#terrariet {
+    display: flex;
+    margin: 24px;
+    margin-top: auto;
+    background-color:rgba(0,0,0,0.2);
+    width: 160px;
+    height: 350px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+}
+
+#vardagsrummet {
+    display: flex;
+    margin: 24px;
+    margin-top: auto;
+    background-color:rgba(0,0,0,0.2);
+    width: 160px;
+    height: 350px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+}
+
+#entren {
+    display: flex;
+    margin: 24px;
+    margin-top: auto;
+    background-color:rgba(0,0,0,0.2);
+    width: 160px;
+    height: 350px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
+}
+
+#biblioteket {
+    display: flex;
+    margin: 24px;
+    margin-top: auto;
+    background-color:rgba(0,0,0,0.3);
+    width: 160px;
+    height: 350px;
+    box-shadow: 0px 0px 16px 0px rgba(0,0,0,0.4);
 }
