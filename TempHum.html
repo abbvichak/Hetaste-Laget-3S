@@ -13,13 +13,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
     <script>
         let firebaseConfig = {
-            apiKey: "AIzaSyAfxNn3StYr8XoMJnCsk_6TZPnCVe5gyig",
-            authDomain: "hetaste-laget-s3.firebaseapp.com",
-            databaseURL: "https://hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app",
-            projectId: "hetaste-laget-s3",
-            storageBucket: "hetaste-laget-s3.appspot.com",
-            messagingSenderId: "1063955437225",
-            appId: "1:1063955437225:web:b80891af14d7635aac7bb8"
+            apiKey: "AIzaSyAcLcmcHbs5cuOOc8iAKEt3m8oYLC15amQ",
+            authDomain: "i-hetaste-laget-s3.firebaseapp.com",
+            databaseURL: "https://i-hetaste-laget-s3-default-rtdb.europe-west1.firebasedatabase.app",
+            projectId: "i-hetaste-laget-s3",
+            storageBucket: "i-hetaste-laget-s3.appspot.com",
+            messagingSenderId: "632147476531",
+            appId: "1:632147476531:web:cbe18b1e5ab6d4ee97a346",
         };
         firebase.initializeApp(firebaseConfig);
     </script>
@@ -45,11 +45,11 @@
                 <!-- <div id="chartDiv" style="width:50%; height:300px; margin:0 auto;"></div> -->
 
                 <div>
-                    <div id="grader1">16°</div>
+                    <div id="grader1"></div>
                 </div>
 
                 <div id="card-image">
-                    <img src="https://icons-for-free.com/iconfiles/png/512/house-131994967908082856.png" width="96px"
+                    <img src="https://www.pngrepo.com/png/277515/512/desk-classroom.png" width="96px"
                         height="96px">
 
                 </div>
@@ -58,11 +58,11 @@
                 <div id="area">Terrariet<br></div>
 
                 <div>
-                    <div id="grader2">16°</div>
+                    <div id="grader2"></div>
                 </div>
 
                 <div id="card-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px"
+                    <img src="https://freepngimg.com/thumb/vps/168413-vps-server-free-transparent-image-hd.png" width="96px"
                         height="96px">
                 </div>
             </div>
@@ -71,11 +71,11 @@
                 <div id="area">Vardagsrummet<br></div>
 
                 <div>
-                    <div id="grader3">16°</div>
+                    <div id="grader3"></div>
                 </div>
 
                 <div id="card-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px"
+                    <img src="https://images.squarespace-cdn.com/content/v1/5d65a35c7e0ce00001fb2d03/1576475211734-2TR50K3DL3P9OXAUB48F/living-room.png" width="96px"
                         height="96px">
                 </div>
             </div>
@@ -84,11 +84,11 @@
                 <div id="area">Entrén<br></div>
 
                 <div>
-                    <div id="grader4">16°</div>
+                    <div id="grader4"></div>
                 </div>
 
                 <div id="card-image">
-                    <img src="https://cdn3.iconfinder.com/data/icons/app-build-minimal/128/1-60-512.png" width="96px"
+                    <img src="https://www.nicepng.com/png/full/82-822081_door-open-door.png" width="96px"
                         height="96px">
                 </div>
             </div>
@@ -97,11 +97,11 @@
                 <div id="area">Biblioteket<br></div>
 
                 <div>
-                    <div id="grader5">16°</div>
+                    <div id="grader5"></div>
                 </div>
 
                 <div id="card-image">
-                    <img src="https://cdn4.iconfinder.com/data/icons/weather-set-2/80/i6-512.png" width="96px"
+                    <img src="https://www.pngrepo.com/png/205852/180/bookshelf.png" width="96px"
                         height="96px">
                 </div>
             </div>
@@ -112,23 +112,32 @@
     <script src="TempHum.js"> </script>
     <canvas id="chart" style="width:20%;max-width:1200px"></canvas>
     <script> 
- var xValues = [100,200,300,400,500,600,700,800,900,1100];-
+ var xValues = ['8:00','9:00','10:00','11:00','12:00','13:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00','22:00','23:00','00:00'];-
 new Chart("chart", {
   type: "line",
   data: {
     labels: xValues,
     datasets: [{
-      data: [860,1140,1060,1060,1070,1110,1330,2210,7830,2478],
+      data: [10,23,30,40],
       borderColor: "red",
       fill: false
     },{
-      data: [1600,1700,1700,1900,2000,2700,4000,5000,6000,7000],
+      data: [20,53,60,70,80,90,100],
       borderColor: "green",
       fill: false
     },{
-      data: [300,700,2000,5000,6000,4000,2000,1000,200,100],
+      data: [80,23,40,50,32,50,18],
       borderColor: "blue",
       fill: false
+    },{
+      data: [2,23,8,9,10],
+      borderColor: "purple",
+      fill: false
+    },{
+      data: [1,23,3,4,5,6],
+      borderColor: "pink",
+      fill: false
+
     }]
   },
   options: {

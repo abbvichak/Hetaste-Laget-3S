@@ -1,5 +1,6 @@
 let database = firebase.database();
 
+
 var temp1 = database.ref('Victors Sensor/Temperature/Current_Temp');
 var hum1 = database.ref('Victors Sensor/Humidity/Current_Hum');
 
