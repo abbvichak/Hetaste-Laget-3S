@@ -1,122 +1,72 @@
 let database = firebase.database();
+let MaxSize = 6
+let values = [
+  {
+   Klassrummet: [],
+   Terrariet: [],
+   Vardagsrummet: [],
+   Entren: [],
+   Biblioteket: []
+  },
+  {
+    Klassrummet: [],
+    Terrariet: [],
+    Vardagsrummet: [],
+    Entren: [],
+    Biblioteket: []
+  }
+];
+
+let sensor1 = database.ref('Victors Sensor');
+let sensor2 = database.ref('Gabriels Sensor')
+let sensor3 = database.ref('Lucas Sensor')
+let sensor4 = database.ref('Noels Sensor')
+let sensor5 = database.ref('Simons Sensor')
 
 
-var temp1 = database.ref('Victors Sensor/Temperature/Current_Temp');
-var hum1 = database.ref('Victors Sensor/Humidity/Current_Hum');
-
-var temp2 = database.ref('Gabriels Sensor/Temperature/Current_Temp')
-var hum2 = database.ref('Gabriels Sensor/Humidity/Current_Hum')
-
-var temp3 = database.ref('Lucas Sensor/Temperature/Current_Temp')
-var hum3 = database.ref('Lucas Sensor/Humidity/Current_Hum')
-
-var temp4 = database.ref('Noels Sensor/Temperature/Current_Temp')
-var hum4 = database.ref('Noels Sensor/Humidity/Current_Hum')
-
-var temp5 = database.ref('Simons Sensor/Temperature/Current_Temp')
-var hum5 = database.ref('Simons Sensor/Humidity/Current_Hum')
-
-let temporhum = [];
 let selectedType = 0;
 
-function updateTempHum1() {
-  console.log(1);
-  document.getElementById("grader1").innerHTML = `${temporhum[selectedType]}${selectedType == 0 ? "°C" : "%"}`
+function updateSensor(id, data){
+  let room = Object.keys(values[0])[id - 1];
+  if(new Date().getSeconds() % 10 == 0){
+    pushToArray(0, room, data.Temperature.Current_Temp);
+    pushToArray(1, room, data.Humidity.Current_Hum);
+    beigechilling()
+  }
+
+  data = values[selectedType][room][0]
+  document.getElementById(`grader${id}`).innerHTML = 
+    `${data === undefined ? 0 : data}${selectedType == 0 ? "°C" : "%"}`;
 }
-function updateTempHum2() {
-  console.log(2);
-  document.getElementById("grader2").innerHTML = `${temporhum[selectedType]}${selectedType == 0 ? "°C" : "%"}`
+
+sensor1.on('value', data => updateSensor(1, data.val()));
+sensor2.on('value', data => updateSensor(2, data.val()));
+sensor3.on('value', data => updateSensor(3, data.val()));
+sensor4.on('value', data => updateSensor(4, data.val()));
+sensor5.on('value', data => updateSensor(5, data.val()));
+
+
+// type - temperature and humidity
+// roomName - The name of the room list to update
+// value - The value to push
+function pushToArray(type, roomName, value){
+  if(values[type][roomName].length == MaxSize)
+    values[type][roomName].pop()
+
+  values[type][roomName].unshift(value);
 }
-function updateTempHum3() {
-  console.log(3);
-  document.getElementById("grader3").innerHTML = `${temporhum[selectedType]}${selectedType == 0 ? "°C" : "%"}`
-}
-function updateTempHum4() {
-  console.log(4);
-  document.getElementById("grader4").innerHTML = `${temporhum[selectedType]}${selectedType == 0 ? "°C" : "%"}`
-}
-function updateTempHum5() {
-  console.log(5);
-  document.getElementById("grader5").innerHTML = `${temporhum[selectedType]}${selectedType == 0 ? "°C" : "%"}`
-}
-temp1.on('value', data => {
-  updateTempHum1();
-  console.log("temperature");
-  temporhum[0] = data.node_.value_;
 
-});
+function update() {
 
-hum1.on('value', data => {
-  console.log("humidity");
-  updateTempHum1();
-  temporhum[1] = data.node_.value_;
-});
+  let date = new Date();
 
-temp2.on('value', data => {
-  updateTempHum2();
-  console.log("temp2");
-  temporhum[0] = data.node_.value_;
+  let hour = date.getHours();
 
-});
+  let minute = date.getMinutes();
 
-hum2.on('value', data => {
-  console.log("hum2");
-  updateTempHum2();
-  temporhum[1] = data.node_.value_;
-});
+  let second = date.getSeconds();
 
-temp3.on('value', data => {
-  updateTempHum3();
-  console.log("temp");
-  temporhum[0] = data.node_.value_;
-
-});
-
-hum3.on('value', data => {
-  console.log("hum");
-  updateTempHum3();
-  temporhum[1] = data.node_.value_;
-});
-
-temp4.on('value', data => {
-  updateTempHum4();
-  console.log("temp");
-  temporhum[0] = data.node_.value_;
-
-});
-
-hum4.on('value', data => {
-  console.log("hum");
-  updateTempHum4();
-  temporhum[1] = data.node_.value_;
-});
-
-temp5.on('value', data => {
-  updateTempHum5();
-  console.log("temp");
-  temporhum[0] = data.node_.value_;
-
-});
-
-hum5.on('value', data => {
-  console.log("hum");
-  updateTempHum5();
-  temporhum[1] = data.node_.value_;
-});
-
-
-
-function Time() {
-
-  var date = new Date();
-
-  var hour = date.getHours();
-
-  var minute = date.getMinutes();
-
-  var second = date.getSeconds();
-
-  var period = "";
+  let period = "";
   if (hour >= 12) {
     period = "PM";
   } else {
@@ -130,14 +80,14 @@ function Time() {
     }
   }
 
-  hour = update(hour);
-  minute = update(minute);
-  second = update(second);
+  hour = updateClock(hour);
+  minute = updateClock(minute);
+  second = updateClock(second);
   document.getElementById("digital-clock").innerText = hour + " : " + minute + " : " + second + " " + period;
-  setTimeout(Time, 1000);
+  setTimeout(update, 1000); 
 }
 
-function update(t) {
+function updateClock(t) {
   if (t < 10) {
     return "0" + t;
   }
@@ -145,15 +95,25 @@ function update(t) {
     return t;
   }
 }
-Time();
+
+update();
 
 document.getElementsByClassName("temp-button")[0].onclick = () => {
   selectedType = 0
-  
 }
 document.getElementsByClassName("hum-button")[0].onclick = () => {
   selectedType = 1
 }
 
-
-
+function beigechilling(){
+ let table = document.getElementsByClassName("temphum-table")
+ for(let i = 0; i < table.length;i++){
+    for(let j = 1; j < table[i].children[0].children.length; j++){
+      table[i].children[0].children[j].children[1].innerHTML = 
+        (values[0][Object.keys(values[0])[i]][j] === undefined ? 0 : values[0][Object.keys(values[0])[i]][j]) + "&degC";
+      table[i].children[0].children[j].children[2].innerHTML = 
+        (values[0][Object.keys(values[0])[i]][j] === undefined ? 0 : values[0][Object.keys(values[0])[i]][j]) + "%";
+    }
+ }
+}
+beigechilling()
