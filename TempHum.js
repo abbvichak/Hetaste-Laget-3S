@@ -28,14 +28,14 @@ let selectedType = 0;
 
 function updateSensor(id, data){
   let room = Object.keys(values[0])[id - 1];
-  if(new Date().getMinutes() % 10 == 0){
+  if(new Date().getSeconds() % 10 == 0){
+    console.log(1)
     pushToArray(0, room, data.Temperature.Current_Temp);
     pushToArray(1, room, data.Humidity.Current_Hum);
     beigechilling()
   }
 
   data = [data.Temperature.Current_Temp, data[0] = data.Humidity.Current_Hum]
-  console.log(data);
   document.getElementById(`grader${id}`).innerHTML = 
     `${data[selectedType] === undefined ? 0 : data[selectedType]}${selectedType == 0 ? "°C" : "%"}`;
 }
@@ -51,7 +51,7 @@ sensor5.on('value', data => updateSensor(5, data.val()));
 // roomName - The name of the room list to update
 // value - The value to push
 function pushToArray(type, roomName, value){
-  if(values[type][roomName].length == MaxSize)
+  if(values[type][roomName].length - 1 == MaxSize)
     values[type][roomName].pop()
 
   values[type][roomName].unshift(value);
@@ -108,13 +108,13 @@ document.getElementsByClassName("hum-button")[0].onclick = () => {
 
 function beigechilling(){
  let table = document.getElementsByClassName("temphum-table")
- for(let i = 0; i < table.length;i++){
+ for(let i = 0; i < table.length; i++){
     for(let j = 1; j < table[i].children[0].children.length; j++){
       table[i].children[0].children[j].children[1].innerHTML = 
         (values[0][Object.keys(values[0])[i]][j] === undefined ? 0 : values[0][Object.keys(values[0])[i]][j]) + "&degC";
+
       table[i].children[0].children[j].children[2].innerHTML = 
         (values[1][Object.keys(values[1])[i]][j] === undefined ? 1 : values[1][Object.keys(values[1])[i]][j]) + "%";
     }
  }
 }
-beigechilling()

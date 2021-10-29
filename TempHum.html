@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I hetaste laget</title>
     <link rel="stylesheet" href="TempHum.css">
-    <link rel="icon" href="https://image.flaticon.com/icons/png/512/769/769346.png">
+    <link rel="icon" href="https://play-lh.googleusercontent.com/Z878h-AVQs_FjIlMmPWIwDKRjna1joiprv_YN9rcJF6iKMjl3bhVltwDBBsbYAH-HmSV">
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -37,6 +37,10 @@
         </div>
     </div>
 
+    <div id="room-header">
+        <h1>Current Statistics</h1>
+    </div>
+
     <div class="card-section">
         <div id="cards">
             <div id="card">
@@ -53,6 +57,11 @@
 
                 </div>
             </div>
+
+            <div>
+                <hr id="splits">
+            </div>
+
             <div id="card">
                 <div id="area">Terrariet<br></div>
 
@@ -64,6 +73,10 @@
                     <img src="https://freepngimg.com/thumb/vps/168413-vps-server-free-transparent-image-hd.png"
                         width="96px" height="96px">
                 </div>
+            </div>
+
+            <div>
+                <hr id="splits">
             </div>
 
             <div id="card">
@@ -79,6 +92,10 @@
                 </div>
             </div>
 
+            <div>
+                <hr id="splits">
+            </div>
+
             <div id="card">
                 <div id="area">Entrén<br></div>
 
@@ -89,6 +106,10 @@
                 <div id="card-image">
                     <img src="https://www.nicepng.com/png/full/82-822081_door-open-door.png" width="96px" height="96px">
                 </div>
+            </div>
+
+            <div>
+                <hr id="splits">
             </div>
 
             <div id="card">
@@ -143,6 +164,15 @@
 
 
     </script> -->
+
+    <div id="statistics-header">
+        <h1>Recent Statistics</h1>
+    </div>
+
+    <div>
+        <hr id="line">
+    </div>
+
     <div id="statistics">
         <!-- <div id="columner"> -->
         <div id="klassrummet">
@@ -154,32 +184,32 @@
                     <th>%</th>
                 </tr>
                 <tr>
-                    <td>10:</td>
+                    <td class="temphum-list">10:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>20:</td>
+                    <td class="temphum-list">20:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>30:</td>
+                    <td class="temphum-list">30:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>40:</td>
+                    <td class="temphum-list">40:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>50:</td>
+                    <td class="temphum-list">50:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>60:</td>
+                    <td class="temphum-list">60:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
@@ -196,32 +226,32 @@
                     <th>%</th>
                 </tr>
                 <tr>
-                    <td>10:</td>
+                    <td class="temphum-list">10:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>20:</td>
+                    <td class="temphum-list">20:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>30:</td>
+                    <td class="temphum-list">30:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>40:</td>
+                    <td class="temphum-list">40:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>50:</td>
+                    <td class="temphum-list">50:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>60:</td>
+                    <td class="temphum-list">60:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
@@ -239,32 +269,32 @@
                     <th>%</th>
                 </tr>
                 <tr>
-                    <td>10:</td>
+                    <td class="temphum-list">10:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>20:</td>
+                    <td class="temphum-list">20:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>30:</td>
+                    <td class="temphum-list">30:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>40:</td>
+                    <td class="temphum-list">40:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>50:</td>
+                    <td class="temphum-list">50:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>60:</td>
+                    <td class="temphum-list">60:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
@@ -281,32 +311,32 @@
                     <th>%</th>
                 </tr>
                 <tr>
-                    <td>10:</td>
+                    <td class="temphum-list">10:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>20:</td>
+                    <td class="temphum-list">20:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>30:</td>
+                    <td class="temphum-list">30:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>40:</td>
+                    <td class="temphum-list">40:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>50:</td>
+                    <td class="temphum-list">50:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>60:</td>
+                    <td class="temphum-list">60:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
@@ -323,32 +353,32 @@
                     <th>%</th>
                 </tr>
                 <tr>
-                    <td>10:</td>
+                    <td class="temphum-list">10:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>20:</td>
+                    <td class="temphum-list">20:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>30:</td>
+                    <td class="temphum-list">30:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>40:</td>
+                    <td class="temphum-list">40:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>50:</td>
+                    <td class="temphum-list">50:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
                 <tr>
-                    <td>60:</td>
+                    <td class="temphum-list">60:</td>
                     <td>0&deg;</td>
                     <td>0%</td>
                 </tr>
@@ -358,16 +388,27 @@
         <!-- </div> -->
     </div>
 
+    <div>
+        <hr id="line">
+    </div>
+
     <div id="credits">
         <div id="credits-header">
             <h1>Creators</h1>
         </div>
+
+        <div>
+            <hr id="credits-line">
+        </div>
+
         <div id="credits-list">
+
             <p id="victor">Victor Håkonsen</p>
             <p id="gabriel">Gabriel Dag</p>
             <p id="simon">Simon Wu</p>
             <p id="lucas">Lucas Olofsson</p>
             <p id="noel">Noel Vahlström</p>
+
         </div>
     </div>
 
