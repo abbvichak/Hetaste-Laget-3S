@@ -34,9 +34,10 @@ function updateSensor(id, data){
     beigechilling()
   }
 
-  data = values[selectedType][room][0]
+  data = [data.Temperature.Current_Temp, data[0] = data.Humidity.Current_Hum]
+  console.log(data);
   document.getElementById(`grader${id}`).innerHTML = 
-    `${data === undefined ? 0 : data}${selectedType == 0 ? "°C" : "%"}`;
+    `${data[selectedType] === undefined ? 0 : data[selectedType]}${selectedType == 0 ? "°C" : "%"}`;
 }
 
 sensor1.on('value', data => updateSensor(1, data.val()));
