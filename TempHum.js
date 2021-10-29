@@ -28,7 +28,7 @@ let selectedType = 0;
 
 function updateSensor(id, data){
   let room = Object.keys(values[0])[id - 1];
-  if(new Date().getSeconds() % 10 == 0){
+  if(new Date().getMinutes() % 10 == 0){
     pushToArray(0, room, data.Temperature.Current_Temp);
     pushToArray(1, room, data.Humidity.Current_Hum);
     beigechilling()
@@ -112,7 +112,7 @@ function beigechilling(){
       table[i].children[0].children[j].children[1].innerHTML = 
         (values[0][Object.keys(values[0])[i]][j] === undefined ? 0 : values[0][Object.keys(values[0])[i]][j]) + "&degC";
       table[i].children[0].children[j].children[2].innerHTML = 
-        (values[0][Object.keys(values[0])[i]][j] === undefined ? 0 : values[0][Object.keys(values[0])[i]][j]) + "%";
+        (values[1][Object.keys(values[1])[i]][j] === undefined ? 1 : values[1][Object.keys(values[1])[i]][j]) + "%";
     }
  }
 }
