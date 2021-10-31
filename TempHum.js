@@ -1,3 +1,4 @@
+//Skapar variabler
 let database = firebase.database();
 let MaxSize = 6
 let values = [
@@ -26,6 +27,7 @@ let sensor5 = database.ref('Simons Sensor')
 
 let selectedType = 0;
 
+//Skapar en funktion som hämtar data från firebase och skickar det till vår hemsida.
 function updateSensor(id, data){
   let room = Object.keys(values[0])[id - 1];
   if(new Date().getSeconds() % 10 == 0){
@@ -40,16 +42,14 @@ function updateSensor(id, data){
     `${data[selectedType] === undefined ? 0 : data[selectedType]}${selectedType == 0 ? "°C" : "%"}`;
 }
 
+//Kallar på funktionen och hämtar då data
 sensor1.on('value', data => updateSensor(1, data.val()));
 sensor2.on('value', data => updateSensor(2, data.val()));
 sensor3.on('value', data => updateSensor(3, data.val()));
 sensor4.on('value', data => updateSensor(4, data.val()));
 sensor5.on('value', data => updateSensor(5, data.val()));
 
-
-// type - temperature and humidity
-// roomName - The name of the room list to update
-// value - The value to push
+//Skapar en funktion som sparar data och skickar det till vår lista
 function pushToArray(type, roomName, value){
   if(values[type][roomName].length - 1 == MaxSize)
     values[type][roomName].pop()
@@ -57,6 +57,7 @@ function pushToArray(type, roomName, value){
   values[type][roomName].unshift(value);
 }
 
+//Skapar en funktion som uppdaterar tiden till vår klocka
 function update() {
 
   let date = new Date();
@@ -88,6 +89,7 @@ function update() {
   setTimeout(update, 1000); 
 }
 
+//Skapar en funktion som updaterar klockans värde på hemsidan
 function updateClock(t) {
   if (t < 10) {
     return "0" + t;
@@ -99,6 +101,7 @@ function updateClock(t) {
 
 update();
 
+//Ändrar värdet på våra variabler så att vi kan få luftfuktighet eller temperatur
 document.getElementsByClassName("temp-button")[0].onclick = () => {
   selectedType = 0
 }
@@ -106,6 +109,7 @@ document.getElementsByClassName("hum-button")[0].onclick = () => {
   selectedType = 1
 }
 
+//skapar en funktion som sparar våra senaste värden i listan
 function beigechilling(){
  let table = document.getElementsByClassName("temphum-table")
  for(let i = 0; i < table.length; i++){
